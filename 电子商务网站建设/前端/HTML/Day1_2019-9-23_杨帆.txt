@@ -1,0 +1,66 @@
+---------------------------------------------------------------
+01-html-概念&三大基石&标准文档结构
+
+	HTML的概念：
+		概念——Hypertext Markup Language超文本标记语言
+		作用——页面显示，将数据结构化显示在页面上
+		HTML运行在浏览器上，由浏览器进行解析显示
+	
+	
+	HTML标准文档结构：
+		文件名.html
+		文档框架：
+			<html>
+				<head></head>  --头标签：浏览器配置信息
+				<body></body>  --主体标签：数据展示信息
+			</html>
+		HTML标签语法：
+			双标签：<标签名></标签名>
+			单标签：<标签名 />
+			注释标签：<!-- -->
+	
+	
+	Web三大基石：
+		URL：Uniform Resource Locator统一资源定位符
+		HTTP：超文本传输协议（规范数据传输格式）
+		HTML
+		
+-----------------------------------------------------------------
+02-html-head标签学习
+
+	总结：
+		网页标题标签、H4/H5字符编码标签；
+		关键字、网页描述、作者；此三个标签可以提升网页在搜索引擎中被命中的概率
+		定时跳转标签
+		
+	<head>
+	
+		<title> PageTitle </title> 
+		<meta charset="utf-8" />
+		<meta http-equiv="content-type" content="text/html;charset="utf-8" />
+		
+		<meta name="keywords" content="word1,关键词,keyword" />
+		<meta name="decription" content="关于网页的一大段描述" />
+		<meta name="author" content="杨帆" />
+		
+		<meta http-equiv="refresh" content="5;url=http://www.baidu.com" />
+		
+	</head>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
