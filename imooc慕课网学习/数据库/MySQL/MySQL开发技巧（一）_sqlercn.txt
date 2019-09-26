@@ -1,0 +1,53 @@
+#SQL介绍
+	- 结构化查询语言
+	- start 1986
+	- 常见句型
+		1.DDL：数据定义语言
+		2.TPL：事务处理语言
+		3.DCL：数据控制语言
+		4.DML：数据操作语言：增删改查
+#JOIN从句
+	- SQL标准中的join类型
+		1.内连接	INNER JOIN
+		2.全外连接	FULL OUTER JOIN
+		3.左外连接	LEFT OUTER JOIN
+		4.右外连接	RIGHT OUTER JOIN
+		5.交叉连接	CROSS JOIN
+	- 内连接的结果集是存在两张表中相同的数据
+	- 左外连接的结果集是保存左表所有记录，对应右表没有符合连接条件的记录为NULL
+		- 可以查询出只存在于A表而不在B表中的数据
+			select * from tableA left join tableB on tableA.col=tableB.col where tableB.col is NULL
+			select * from tableA left join tableB on tableA.col=tableB.col where tableB.col is not NULL
+	- 右外连接，与左外连接相似，左右互换
+	- 全连接
+		- 问题：mysql不支持full join
+		- 解决：使用union all，分别先做两张表的左右连接，再将结果集union all连接
+	- 交叉连接，笛卡尔积
+		select * from tableA cross join tableB;
+#使用连接技巧
+	1.更新字段，如果所更新的表出现在查询where条件中将会报错
+		- 解决方法：使用连接join将过滤条件从where转移至from
+	2.使用join优化子查询
+		- 问题：对于where子查询，主查询每查询一条记录，都将执行一遍子查询，查询次数是m乘n
+		- 解决：使用join将两表连接移动至from子句中
+	3.使用join优化聚合子查询
+		- having条件和where条件的区别：
+			1.使用场景不同
+				- where可以使用在select、update、delete、insert等语句中
+				- having只能使用在select中
+			2.使用顺序不同
+				- where在查询数据分组之前执行
+				- having在查询数据分组之后执行
+			3.子句区别
+				- having子句可以使用聚合函数sum、count、avg、max、min
+				- where子句不能使用聚合函数
+			4.小总结
+				1.where用来筛选select...from...查询结果集的行
+				2.group by对where筛选的结果进行分组
+				3.having从分组后的结果中筛选行
+	4.分组选择
+		- 场景一：选择指定指标最大或最小的一条记录
+			- 解决：直接使用聚合函数max或min即可
+		- 场景二：选择点击量最大的前几条记录
+			- 解决：使用order by排序，用LIMIT进行分组选择
+			- 解决二：row_number()函数，目前mysql并不支持
