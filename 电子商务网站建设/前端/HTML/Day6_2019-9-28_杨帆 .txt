@@ -1,0 +1,67 @@
+-----------------------------------------------------------------------------------------
+#10&11-html-form标签&表单域学习
+	1.表单标签：
+		- form：收集用户数据传给指定服务器
+		- 属性：
+			- action：提交地址(URL)
+			- method：提交方式，一般是GET/POST
+				- GET：少量数据，显示地拼接在URL中，？name1=value1&
+				- POST：大量数据，附在HTTP报文中，安全保密，隐式提交
+		- 提交时，form标签将内部所有表单域标签用户的书写或选择按照method指定的方式提交给action指定的提交地址
+		- 注意：
+			- 表单数据提交时，表单项必须要有name属性，否则不提交
+	2.表单域标签：
+		- 给用户提供书写数据或选择的标签
+		- 文本框：	<input type="text" name=""  value="" />
+		- 文本域：	<textarea name="" rows="" cols="" />
+		- 密码框：	<input type="password" name=""/>
+		- 多选框：	<input type="checkbox" name=""  value="要提交的数据" checked="checked" />
+		- 单选按钮：<input type="radio" name=""  value="要提交的数据" checked="checked" />
+		- 提交按钮：<input type="submit" value="登录/提交" />
+		- 普通按钮：<input type="button" value="普通按钮" />
+		- 隐藏标签：<input type="hidden" name="" value="" />
+		- 下拉列表：<select name="" >
+						<option value="" ></option>
+						<option value="" ></option>
+						<option value="" selected="true"></option>
+					</select>
+		- 标签：
+			- input
+				- type：
+					- text：文本框，内容用户可见
+					- password：密码框，内容不可见(*)
+					- radio：单选框，name属性值一样的只能选中其中之一
+					- checkbox：多选框，name属性值需要一致
+				- name：提交数据的键
+				- value：要提交的值，可以设置默认
+				- checked：默认选择
+			- select
+				- name
+			- option
+				- value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
