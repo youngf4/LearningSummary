@@ -1,0 +1,56 @@
+--------------------------------------
+#1-css-css的概念和作用&css声明
+	##CSS简介
+		- 为什么需要CSS？
+			- HTML负责数据的格式化展示，如果利用其属性进行布局将十分繁琐且不易维护难以复用
+		- 什么是CSS：
+			- 概念：Cascading Style Sheet：层叠样式表
+			- 作用：页面样式开发，给页面布局
+			- 特点：语言简单，能够复用，依赖于HTML
+		- 使用：
+			- CSS声明
+			- CSS选择器
+			- CSS常用样式
+			- CSS盒子模型
+			- CSS定位
+			- CSS布局
+	##CSS的声明
+		1. 使用style标签，声明在head标签之内：
+			- 	<style type="text/css">
+					hr{
+						border:1px;
+						color:red;
+					}
+				</style>
+			- 一般声明本页面内的公共样式或指定某类标签的样式
+		2. 使用标签内的style属性进行声明
+			- <hr style="border:1px;color:red;">
+			- 只应用于当前标签
+		3. 使用link标签链接外部css文件：
+			- <link rel="stylesheet" type="text/css" href="css/my.css" />
+			- (1:n)一个样式应用于多个网页，如果需要修改样式只需要修改css样式文件
+		4. 若同时使用三个css声明应用于同一个标签
+			- 使用style属性的标签将显示其声明的样式，而不显示style标签和链接文件里面的样式
+			- 如果css声明style标签和link标签都声明在head标签中，使用就近原则
+		5. 了解浏览器对HTML文件的解析顺序：顺序解析
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
