@@ -1,0 +1,118 @@
+#----------------------------------
+#02-css-css的选择器和常见样式
+##选择器
+	- 标签选择器：
+		- 标签名{
+				样式1：值；
+				样式2：值；
+				样式3：值；
+				……
+			}
+		- 标签选择器将给页面内所有该标签加上样式；
+	- ID选择器：
+		- 1.首先标签声明属性
+			<table id="tid"></table>
+		  2.#tid{
+				样式1：值；
+				样式2：值；
+				样式3：值；
+				……
+			}
+		- 可以给某一个单独的指定标签加样式，优先级>标签选择器
+	- 类选择器：
+		- 1.声明样式类：
+			.className{
+				样式1：值；
+				样式2：值；
+				样式3：值；
+				……
+			}
+		  2.标签用class属性引入样式
+			<table class="className" ></table>
+		- 可以给不同的标签加以相同的样式
+	- 全部选择器：
+		- *{
+			  样式1：值；
+			  样式2：值；
+			  样式3：值；
+			  ……
+			}
+		- 选择所有HTML标签，并加以相同的样式
+	- 选择器优先级：*>class>标签>id
+	- 组合选择器：
+		- 选择器1,选择器2,……{
+				样式1：值；
+				样式2：值；
+				样式3：值；
+				……
+			}
+		- 减少不同选择器相同样式的重复代码段
+	- 子标签选择器：
+		- ul li{
+				样式1：值；
+				样式2：值；
+				样式3：值；
+				……	
+			}
+	- 属性选择器
+		- 标签名[属性=值]{
+				样式1：值；
+				样式2：值；
+				样式3：值；
+				……	
+			}
+			input[type=text]{样式1：值；样式2：值；样式3：值；……}
+		- 选择某指定属性值的标签，改变其样式
+##常见样式
+	- 边框设置：
+		- 边框线性宽度颜色：border：solid 1px black；
+		- 上下左右边框：border-top/bottom/left/right：none；
+		- 边框角：	border-radius：10px；
+	- 字体设置：
+		- 字体大小：font-size：10px；
+		- 字体：	font-family："黑体"；
+		- 字体加粗：font-weight：bold；
+		- 字体位置：text-align：center；
+	- 颜色设置：
+		- 字体颜色：color：red；
+		- 背景颜色：background：red；
+	- 背景图片设置：
+		- 背景图片：background-image：url(图片路径)；
+		- 不重复：	background-repeat：no-repeat；
+		- 图片平铺：background-size：cover；
+	- 宽和高设置
+		- 宽：width
+		- 高：height
+	- 浮动设置：float：left/right；
+	- 间距设置：
+		- 行间距：	line-height：20px；
+		- 字体间距：letter-spacing：5px；
+#03-css-css样式使用&照片墙
+	- 列表无黑点：list-style：none；
+	- 列表项横排：display：inline；
+	- 列表左悬浮：float：left；
+		- 列表左悬浮，ul默认没有了高度，如果要对ul进行样式设置，需先设置height
+		- ul{height：10px；background-color：gray；}
+	- 超链接不要下划线：text-decoration：none；
+	- 文本加下划线：text-decoration：underline；
+	- image倾斜角度：transform：rotate(-10deg)；
+	- image缩放比例：transform：scale(1.5)；
+		- scale():大于1放大；小于1缩小；
+	- 优先级：z-index：1；
+	- 设置显示时间：transition：1.5s；
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
