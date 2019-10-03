@@ -65,7 +65,7 @@
 		- 选择某指定属性值的标签，改变其样式
 ##常见样式
 	- 边框设置：
-		- 边框线性宽度颜色：border：solid 1px black；
+		- 边框线性宽度颜色：border：solid/dashed 1px black；
 		- 上下左右边框：border-top/bottom/left/right：none；
 		- 边框角：	border-radius：10px；
 	- 字体设置：
