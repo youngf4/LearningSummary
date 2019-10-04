@@ -1,0 +1,99 @@
+	*{
+		margin:0;
+		padding:0;
+	}
+/*设置页面header头部样式*/
+	#header{
+		width:100%;
+		height:8%;
+	}
+	#header a{
+		color:black;
+	}
+	#header a:hover{
+		color:#3385FF;
+	}
+	/*设置导航栏样式*/
+		#header_nav{
+			position:absolute;
+			right:20px;
+			top:18px;
+		}
+		#header_nav li{
+			float:left;
+			list-style:none;
+			margin-left:20px;
+		}
+		#header_nav li a{
+			font-size:13px;
+			font-weight:700;
+		}
+/*设置页面main主体部分样式*/
+	#main{
+		width:100%;
+		height:51%;
+
+		text-align:center;
+	}
+	/*设置span&图片&文本框&按钮样式*/
+		#main img{
+			margin-top:60px;
+			margin-bottom:50px;
+			width:270px;
+			
+		}
+		input[type=text]{
+			width:550px;
+			height:34px;
+			border:solid 1px #5063CD;
+			background-image:url(image/photo.png);
+			background-repeat:no-repeat;
+			background-position-x:520px;
+			background-position-y:5px;
+			background-size:20px;
+		}
+		input[type=submit]{
+			height:35px;
+			width:100px;
+			color:white;
+			font-size:15px;
+			letter-spacing:2px;
+			background-color:#3385FF;
+			border:solid 1px #3385FF;
+			position:relative;
+			top:1px;
+			right:5px;
+		}
+/*设置页面footer底部样式*/
+	#footer{
+		width:100%;
+		height:41%;
+		text-align:center;
+	}
+	/*设置图片及文字*/
+		#footer img{
+			width:110px;
+		}
+		#footer_app{
+			letter-spacing:3px;
+			line-height:40px;
+		}
+		#footer_p{
+			font-size:14px;
+			font-weight:400;
+			line-height:22px;
+			color:gray;
+		}
+		.footer_text{
+			font-size:12px;
+			font-weight:400;
+			line-height:22px;
+			color:gray;
+		}
+		.footer_text a{
+			margin:0 10px;
+			font-size:12px;
+			font-weight:400;
+			line-height:22px;
+			color:gray;
+		}

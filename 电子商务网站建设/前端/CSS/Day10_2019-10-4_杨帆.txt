@@ -1,0 +1,11 @@
+#06-css-模拟百度首页
+#07-css-模拟百度首页
+	- 伪类
+		- hover：鼠标移动至元素上，展示不同样式
+	- 背景图片
+		- background-image:url(image/photo.png);
+		- background-repeat:no-repeat;
+		- background-position-x:520px;
+		- background-position-y:5px;
+		- background-size:20px;
+		- background-size:20px 30px;
