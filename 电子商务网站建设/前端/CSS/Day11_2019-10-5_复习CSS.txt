@@ -1,0 +1,130 @@
+--------------------------------------------------------------
+#Day7
+#1-css-css的概念和作用&css声明
+	1. 为什么需要CSS？HTML进行样式布局有什么缺点？
+		- HTML主要负责数据的格式化显示，如果利用其属性进行布局，将十分繁琐且难以维护，也达不到复用
+	2. CSS的概念和作用特点？
+		- 层叠样式表
+		- 负责页面布局及样式设置
+		- 语法简单，依赖于html
+	3. CSS的三种声明及其作用？
+		- 标签声明<style type="text/css"></style>
+		- 外部引入<link rel="stylesheet" type="text/css" href="" />
+		- 标签属性<hr style="" />
+	4. 如果同时使用三种声明将如何显示？
+		- 优先显示标签属性声明的样式
+		- style标签与link标签在head标签内，就近原则
+--------------------------------------------------------------
+#Day8
+#02-css-css的选择器和常见样式
+	1.CSS选择器及作用（4+3）
+		- 标签选择器__div{}
+		- 类选择器____.class{}
+		- id选择器____#id{}
+		- all选择器___*{}
+		- 组合选择器__#id,.class{}
+		- 子标签选择器ul li{}
+		- 属性选择器input[type=text]{}
+	2.利用不同选择器选择同一标签添加样式，将会显示哪一种？
+		- 优先级从高到低：id>class>标签>all
+	3.常见样式单（边框/字体/字体大小/字体颜色/背景颜色/背景图片/图片不重复/图片平铺/浮动/宽和高/行高）
+		- border
+		- font-family
+		- font-size
+		- color
+		- background-color
+		- background-image
+		- background-repeat
+		- background-siz:cover
+		- float
+		- height/width
+		- line-height
+--------------------------------------------------------------
+#Day8
+#03-css-css样式使用&照片墙
+	1.如何设置边框的圆角
+		- border-radius: 10px;
+	2.如何设置单侧边框，如左边框
+		- border-left: solid 1px black
+	3.如何设置边框的线性、宽度、颜色;
+		- border: solid 1px black;
+	4.如何设置字体、大小、加粗、居中、字体间距
+		- font-family: "黑体";
+		- font-size: 16px;
+		- font-weight: bold;
+		- text-align: center;
+		- letter-spacing: 1px;
+	5.如何设置背景图片，要求不重复、平铺
+		- background-image: url();
+		- background-repeat: no-repeat;
+		- background-size: cover;
+	6.如何去除列表的标点或序号
+		- list-style: none;
+	7.如何让列表横排（两种）
+		- float: left;
+		- display: inline;
+	8.为什么横排列表（左悬浮）直接设置背景颜色页面无显示？
+		- 列表li左悬浮使得ul的高度为0，所以需要先设置ul的高度
+	9.超链接去除下划线
+		- text-decoration: none;
+	10.如何设置照片倾斜角度
+		- transform: rotate(-10deg);
+	11.如何设置显示级别
+		- z-index: 1;0
+	12.如何设置显示时间加快/减缓
+		- transition: 1.5s;
+	13.如何设置照片缩放/放大
+		- transform: scale(1.5);
+--------------------------------------------------------------
+#Day9
+#04-css-css的盒子模型及简单定位
+	1. div的作用
+		- 页面布局
+	2. div内子元素设置了百分比的宽高，将显示多大？
+		- 以父级div的大小为百分之百
+	3. 虚框线
+		- border: dashed 1px black;
+	4. div的盒子模型
+		- margin
+		- border
+		- padding
+		- content
+	5. 如何设置div居中
+		- margin: 0px auto;
+	6. 盒子模型的宽度设置是怎样变化的（往内/往外）？
+		- 以内容区域为中心，往外变化
+	7. margin/padding的不同参数（1/2/4个）的使用/单侧设置
+		- margin/padding-top/bottom/left/right
+		- margin/padding: apx;四个方向的宽度都为apx
+		- margin/padding: apx bpx;上下apx，左右bpx
+		- margin/padding: apx bpx cpx dpx; 上a右b下c左d,以0点开始顺时针
+--------------------------------------------------------------
+#Day9
+#05-css-css的定位
+	1. 三种常用定位的声明
+		- 相对定位：position：relative;
+		- 绝对定位：position：absolute;
+		- 固定定位：position：fixed;
+	2. 相对定位是相对哪一个位置？
+		- 相对元素原本位置
+	3. 绝对定位是参照哪一个位置？
+		- 参照屏幕边界
+	4. 固定定位是参照哪一个位置？
+		- 参照屏幕边界，固定在屏幕上，不随滚动条滚动而移动
+	5. 相对定位其他元素位置变不变？
+		- 相对定位元素显示层级变高，其他元素位置不变
+	6. 相对定位的元素会顶层显示还是底层显示？
+		- 相对定位元素显示层级变高，其他元素位置不变，会“挡住”其他元素
+	7. 其他元素如何在相对定位元素之上显示？
+		- 设置其定位为相对，再设置显示层级z-index
+	8. 绝对定位元素如何设置参考父级元素？
+		- 将绝对定位元素的父级元素设置为相对定位
+--------------------------------------------------------------
+#Day10
+#06&07-css-模拟百度首页
+	1. 设置元素背景图片及其大小
+		- background-image:url();
+		- background-size: 20px;
+	2. 设置背景图片坐标
+		- background-position-x: 10px;
+		- background-position-y: 10px;
