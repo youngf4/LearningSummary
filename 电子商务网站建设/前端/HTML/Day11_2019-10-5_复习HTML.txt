@@ -1,0 +1,180 @@
+------------------------------------------------
+#Day1
+#01-html-概念&三大基石&标准文档结构
+	1.HTML的英文全称及中文名
+		- Hypertext Markup Language
+		- 超文本标记语言
+	2.HTML与HTTP的区别
+		- HTML：超文本标记语言，用于页面数据格式化显示
+		- HTTP：超文本传输语言，用于服务器与浏览器之间传输数据
+	3.Web的三大基石，及理解
+		- URL：浏览器定位到资源文件服务器
+		- HTTP：服务器将数据传输到浏览器
+		- HTML：浏览器将服务器发来的数据格式化展示在页面上
+	4.HTML的文档结构、标签语法
+		- 文件名后缀.html
+		- 单双标签
+		- 文档标准格式：
+			<html>
+				<head></head>
+				<body></body>
+			</html>
+------------------------------------------------
+#Day1
+#02-html-head标签学习
+	1.网页标题标签
+		- <title>网页标题</title>
+	2.如何解决网页文本乱码问题
+		- <meta charset="utf-8" />
+	3.如何提高网页被搜索引擎命中的概率
+		- <meta name="author" content="author_name" />
+		- <meta name="keyword" content="key1,key2" />
+		- <meta name="description" content="description" />
+	4.如何设置网页定时自动跳转
+		- <meta http-equiv="refresh" content="3;url=http://www.baidu.com" />
+-------------------------------------------------
+#Day2
+#03-html-body标签（文本标签）
+	1.代码中的换行空格在页面中如何显示
+		- 换行：<br />
+		- 空格：&nbsp;
+	2.标题标签、水平线标签（长/高/颜色/位置）、段落标签、换行标签
+		- <h1>---<h6>
+		- <hr width="" size="" color="" align="center/left/right"/>
+		- <p></p>
+		- <br />
+	3.空格符、权重标签
+		- &nbp;
+		- <b>加黑加粗</b>
+		- <i>斜体</i>
+		- <u>下划线</u>
+		- <del>中划线</del>
+-------------------------------------------------
+#Day2
+#04-html-body标签（列表标签）
+	1.无序列表
+		- <ul>
+			<li></li>
+			<li></li>
+		  </ul>
+	2.有序列表
+		- <ol>
+			<li></li>
+			<li></li>
+		  </ol>
+	3.自定义列表
+		- <dl>
+			<dt></dt>
+			<dd></dd>
+			<dd></dd>
+		  </dl>
+	4.改变有序列表编号
+		- <ol type="a/A/1/I" >
+-------------------------------------------------
+#Day3
+#05-html-图片标签
+	1.三种文件路径（本地2/网络）
+		- 本地相对路径
+		- 本地绝对路径
+		- URL
+	2.鼠标停留在图片上显示文字
+		- <img title="文字" />
+	3.图片加载不出来时默认显示
+		- <img alt="默认值" />
+	4.图片大小调整
+		- <img width="" height="" />
+---------------------------------------------------------------
+#Day3
+#06-html-超链接
+	1.超链接标签及属性
+		- <a href="" ></a>
+	2.链接页面打开的位置（本页面跳转/新标签页打开/顶层/父层）
+		- <a targer="_self/_blank/_parent/_top" ></a>
+	2.锚点设置与定位
+		- <a name="锚点" ></a>
+		- <a href="#锚点"></a>
+---------------------------------------------------------------
+#Day4
+#07-html-表格标签
+	1.表格标签框架
+		- <table>
+			<tr>
+				<td></td>
+			</tr>
+		  </tabl>
+	2.表格标签属性（边框/宽高/内外边距）
+		- <table border="1px" cellspacing="" cellpadding="" width="" height="" >
+	3.单元格合并（行和/列和）
+		- <td colspan/rowspan="2" >并删除相邻列/行的单元格
+---------------------------------------------------------------
+#Day4
+#08-html-复习&练习
+--------------------------------------
+#Day5
+#09-html-iframe&frameset标签学习
+	1.内嵌标签和框架标签
+		- <iframe src="" width="" height="" name=""/>
+			- 可结合超链接标签，在内嵌区域实现跳转
+		- <frameset>
+			<frame></frame>
+			<frame></frame>
+		  </frameset>
+	2.二者作用的不同
+		- 内嵌标签将不同网页的内容集中展示在某指定网页中，各网页与主网页为包含关系
+		- 框架标签将页面部分分割成不同的区域，每个区域为单独的网页内容，互相之间为并列，且可以提取相同部分
+	3.内嵌标签的属性（src/宽高/name）
+		- <iframe src="" width="" height="" name=""/>
+	4.结合超链接标签的使用
+		- 将超链接target属性值设置为内嵌/框架区域的name值
+	5.框架标签如何切分页面
+		- <frameset raws/cols="10%,*,20%" >
+-------------------------------------------
+#Day6
+#10-html-form标签&表单域学习(1)
+	1.表单标签和表单域标签，之间的关系？
+		- 表单标签<frorm>
+		- 表单域标签（详见下）
+	2.表单标签如何提交数据？（action/method/submit/name）
+		- action：form标签属性，指明要将数据提交的服务器地址
+		- method：form标签属性，指明提交数据的方式，一般GET/POST
+		- name：表单域标签的属性，其所提交数据的键
+		- submit：提交按钮
+	3.表单标签如何收集数据？（表单域标签）
+		- 通过表单域标签接收用户输入的数据
+	4.表单域标签name属性的作用？如果没有可以吗？
+		- 每个表单域标签收集数据的键（标识），没有name数据将不会被提交
+	5.GET和POST的相同与区别？
+		- 相同：提交表单数据
+		- 不同：
+			- 数据大小，GET浏览器限制，POST无限制
+			- 提交方式，GET将数据以键值对附在URL中，POST将数据通过HTTP报头
+			- 安全保密性
+---------------------------------------------
+#Day6
+#11-html-form标签&表单域学习(2)
+	1.表单域标签（文本区/文本域/密码框/单选按钮/多选框/普通按钮/提交按钮/隐藏标签/下拉列表）
+		- <input type="text" name="" />
+		- <textarea name="" rows="" cols="" />
+		- <input type="password" name="" />
+		- <input type="radio" name="" value="" checked="checked" />
+		- <input type="checkbox" value="" name="" />
+		- <input type="button" />
+		- <input type="submit" />
+		- <input type="hidden" value="" name="" />
+		- <select name="" >
+			<option value=""></option>
+			<option value=""></option>
+		  </select>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
