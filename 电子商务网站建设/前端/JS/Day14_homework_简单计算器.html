@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>简单计算器</title>
+		<meta charset="utf-8" />
+		<style type="text/css" >
+			#cal{
+				border: solid 2px;
+				border-radius:10px;
+				width:400px;
+				height:500px;
+				text-align:center;
+				margin:auto;
+				margin-top: 20px;
+			}
+			input[type=text]{
+				width:380px;
+				height:45px;
+				margin: 20px auto;
+			}
+			input[type=button]{
+				width:80px;
+				height:80px;
+				font-size:45px;
+				font-weight:blod;
+				margin: 5px 5px;
+			}
+		</style>
+		<script type="text/javascript" >
+			function test(btn){
+				var num = btn.value;
+				switch(num){
+					case "C":
+						document.getElementById("inp").value="";
+						break;
+					case "=":
+						document.getElementById("inp").value=eval(document.getElementById("inp").value);
+						break;
+					default:
+						document.getElementById("inp").value+=num;
+						break;
+				}
+			}
+		
+		
+		</script>
+	</head>
+	<body>
+		<h3 align="center" >简单计算器实例</h3>
+		<hr />
+		<div id="cal" >
+			<input type="text" id="inp" value="" />
+			<br />
+			<input type="button" value="1" onclick="test(this)" />
+			<input type="button" value="2" onclick="test(this)" />
+			<input type="button" value="3" onclick="test(this)" />
+			<input type="button" value="+" onclick="test(this)" />
+			<br />
+			<input type="button" value="4" onclick="test(this)" />
+			<input type="button" value="5" onclick="test(this)" />
+			<input type="button" value="6" onclick="test(this)" />
+			<input type="button" value="-" onclick="test(this)" />
+			<br />
+			<input type="button" value="7" onclick="test(this)" />
+			<input type="button" value="8" onclick="test(this)" />
+			<input type="button" value="9" onclick="test(this)" />
+			<input type="button" value="*" onclick="test(this)" />
+			<br />
+			<input type="button" value="C" onclick="test(this)" />
+			<input type="button" value="0" onclick="test(this)" />
+			<input type="button" value="=" onclick="test(this)" />
+			<input type="button" value="/" onclick="test(this)" />
+		
+		
+		
+		</div>
+	</body>
+</html>
