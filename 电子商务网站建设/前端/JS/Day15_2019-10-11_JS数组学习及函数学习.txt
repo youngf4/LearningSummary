@@ -1,0 +1,52 @@
+-----------------------------------
+#08-js-JS的数组学习2
+	- 常用方法：
+		- arry.concat(a,b,c) 数组合并，返回新的数组
+		- arry.join(item) 数据指定间隔符，转换为字符串
+		- arry.pop() 移除数组最后一个元素，并返回该元素
+		- arry.push(item) 给数组中追加元素，并返回新的长度
+		- arry.shift() 从第一个位置删除元素，并返回该元素
+		- arry.unshift() 将元素插入第一个位置，并返回新长度
+		- arry.sort()
+		- arry.splice(start,count,newItem) 
+			指定位置开始删除多个元素，
+			返回移除的元素，
+			并且在删除位置插入新的元素
+-------------------------------------------------
+#09/10-js-JS的函数学习
+	- 函数的声明
+		- 第一种方式：
+			function fun(a,b){
+				alert("声明一");
+			}
+		- 第二种方式：
+			var fun = new Function("a","b","alert('声明二')");
+		- 第三种方式：
+			var fun = function(a,b){
+				alert("方式三");
+			}
+		- 三种方式表面不同，底层其实都是函数对象
+	- 函数的参数：
+		- 函数调用时，形参可以不赋值
+		- 函数调用时，形参可以不全部赋值
+		- 未赋值参数默认类型undefined
+	- 函数的返回值
+		- 不用显示声明
+		- 利用return语句返回
+		- 若函数没有返回值，默认返回undefined
+	- 函数的执行符
+		- 函数名();
+		- 没有小括号的函数名指向一个函数对象
+	- 函数作为实参传递
+			function testFun(a){
+				alert(a);
+				alert(a());
+			}
+			var testParam=function(){
+				alert("函数参数");
+				return "js参数";
+			}
+			testFun(testParam);
+			testFun(testParam());
+		- alert(a)和alert(a())的不同
+		- testFun(testParam)和testFun(testParam())的不同
