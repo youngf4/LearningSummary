@@ -1,0 +1,67 @@
+#11_js_JS自定义类
+	1. 类的声明
+		- 声明关键字：function
+		- 声明格式：
+			function Person(name,age){
+				this.name=name;
+				this.age=age;
+				this.test=function(a){
+					alert(a);
+				}
+			}
+		- 类中变量可以不用声明
+		- 上述声明方式new对象，每个对象的test都单独拥有一块内存区域，即p1.test!=p2.test
+		- 使用prototype关键字：
+			- Person.prototype.test=function(a){alert(a);};
+			- 此方式下，不同对象的test指向内存区域同一个test（理解：java static）
+			- p1.test===p2.test
+		
+	2. 类的使用
+		- var p1 = new Person("Lucy",32);
+		- 注意：
+			- 在使用中，调用未显式的在代码中写到的变量，会自动声明，如：alert(p1.address);不会报错，显示undefined
+			- 类的声明是对公共部分的抽取，每个对象可以自定义扩充自己的内容
+	3. 类的“继承”
+		- 通过类原型空间声明其他类的对象，来调用其他类的方法，类似java中的属性是对象
+#12_js_自定义对象
+	1. 创建自定义对象
+		- 创建空对象，自定义自己的属性
+			- 方式一：var obj = {};
+			- 方式二：
+				var obj = new Object();
+				obj.name="";
+				obj.age;
+		- 其他Object对象就没有name和age属性
+		- 自定义对象常用来存储数据，用于前后端交互
+		- 原因：不能预先知道有哪些属性，所以用自定义对象来动态创建对象属性来保存数据
+		- 应用：Ajax中会使用
+#13_js_常用方法和对象
+	- String对象
+		- 操作字符串
+			- 大小写转换
+			- 首字母大写
+				- 字符串截取第一个字符
+				- 将第一个字符转换为大写
+				- 字符串拼接
+	- Math对象
+		- 数学运算
+			- Math.random()随机数[0,1)
+			- Math.floor()向下取整
+	- Date对象
+		- 获取时间
+			- date.getYear()从1900起年份数
+			- date.getFullYear()当前年份
+			- date.getMonth()从0开始
+			- date.Date()返回日期
+			- date.getDay()返回星期数，星期日为0
+			- date.getHour()返回小时数
+			- date.getMinutes()返回分钟数
+			- date.getSecond()返回秒数
+		- 获取的是客户端时间，一般作为功能校验使用服务器时间
+	- Global对象
+		- Global 对象从不直接使用，并且不能用 new 运算符创建。它在 Scripting 引擎被初始化时创建，并立即使其方法和属性可用
+		- 所有方法直接使用
+			- eval()将字符串转换为可执行js代码
+			- isNaN()
+			- parseFloat()
+			- parseInt()
