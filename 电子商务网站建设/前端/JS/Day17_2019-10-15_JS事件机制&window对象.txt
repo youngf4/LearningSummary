@@ -1,0 +1,86 @@
+#14/15_js_js的事件机制
+	1. 常见事件机制
+		- 单双击事件
+			- 单击：onclick
+			- 双击：ondblclick
+		- 鼠标事件
+			- 悬停：onmouseover
+			- 移动：onmousemove
+			- 移出：onmouseout
+		- 键盘事件
+			- 弹起：onkeyup
+			- 按键：onkeydown
+		- 焦点事件
+			- 获取焦点：onfocus
+			- 失去焦点：onblur
+		- 页面加载事件
+			- 页面加载：onload
+		- 值改变机制
+			- onchange
+				- 加在输入框时，值改变失去焦点之后才会被触发
+				- 一般用在合理的标签（下拉框等）
+	2. 添加事件
+		1. 在html标签中利用属性添加
+			- 事件只在当前html元素上有效
+			- 一个html元素可以添加多个事件
+		2. 使用document对象
+	3. 添加事件注意：
+		- 给合理的元素添加合理的事件
+		- 给同一个元素添加多个事件，注意多个事件是否有冲突
+		- 事件阻断：事件监听函数的返回值返回给事件时，false将会阻断当前标签的功能
+			<a href="" onclick="testonclick();" >123</a>
+		- 超链接调用
+			<a href="javascript:testA()" ></a>
+#16/17/18_js_window对象
+	1. BOM浏览器对象模型
+		- 规范浏览器对JS语言的支持
+		- JS调用浏览器本身的功能
+		- 具体实现是window对象
+	2. window对象
+		- 不用new，直接使用即可，window关键字可以省略
+		1. 框体方法
+			- window.alert()	警告框，无返回值
+			- window.confirm()	确认框，返回true/false
+			- window.prompt()	输入提示框，返回输入内容，点击返回null
+		2. 定时和间隔执行方法
+			- window.setTimeout(参数一,参数二)	定时执行
+				- 参数一：函数对象
+				- 参数二：时间，单位毫秒
+				- 返回值：定时器的id
+			- window.setInterval(参数一,参数二)	定时间隔执行
+				- 参数一：函数对象
+				- 参数二：时间，单位毫秒
+				- 返回值：间隔器的id
+			- window.clearTimeout(id)
+			- window.clearInterval(id)
+		3. 子窗口方法
+			- 子窗口方法
+				- window.open()	弹出空白页
+				- window.open('page.html',
+								'newwindow',
+								'height=100,width=400,
+									top=0,left=0,
+									toolbar=no,menubar=no,scrollbars=no,
+									resizable=no,location=no,status=no')
+				- window.close()关闭页面
+					- window.close()方法只能关闭window.open()方法打开的页面
+			- 子页面调用父页面的方法
+				- window.opener.父页面函数()
+	3. window常见属性
+		- 地址栏属性
+			- location
+			- window.location.href="http://www.baidu.com"
+			- window.location.reload()
+		- 历史记录属性
+			- history
+			- window.history.forward()
+			- window.history.back()
+			- window.history.go(index)
+		- 屏幕属性
+			- screen
+			- window.screen.width
+			- window.screen.height
+		- 浏览器配置属性
+			- navigator
+			- window.navigator.userAgent
+		- 主题面板属性document
